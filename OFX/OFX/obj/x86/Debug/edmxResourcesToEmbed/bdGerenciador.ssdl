@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GerenciadorModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="GerenciadorModelStoreContainer">
+    <EntitySet Name="Agencia" EntityType="GerenciadorModel.Store.Agencia" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Banco" EntityType="GerenciadorModel.Store.Banco" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Conta" EntityType="GerenciadorModel.Store.Conta" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Movimento" EntityType="GerenciadorModel.Store.Movimento" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Natureza" EntityType="GerenciadorModel.Store.Natureza" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Relacao" EntityType="GerenciadorModel.Store.Relacao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Titulo" EntityType="GerenciadorModel.Store.Titulo" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Agencia_Banco" Association="GerenciadorModel.Store.FK_Agencia_Banco">
+      <End Role="Banco" EntitySet="Banco" />
+      <End Role="Agencia" EntitySet="Agencia" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Conta_Agencia" Association="GerenciadorModel.Store.FK_Conta_Agencia">
+      <End Role="Agencia" EntitySet="Agencia" />
+      <End Role="Conta" EntitySet="Conta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Movimento_Conta" Association="GerenciadorModel.Store.FK_Movimento_Conta">
+      <End Role="Conta" EntitySet="Conta" />
+      <End Role="Movimento" EntitySet="Movimento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Titulo_Natureza" Association="GerenciadorModel.Store.FK_Titulo_Natureza">
+      <End Role="Natureza" EntitySet="Natureza" />
+      <End Role="Titulo" EntitySet="Titulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Titulo_Relacao" Association="GerenciadorModel.Store.FK_Titulo_Relacao">
+      <End Role="Relacao" EntitySet="Relacao" />
+      <End Role="Titulo" EntitySet="Titulo" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Agencia">
+    <Key>
+      <PropertyRef Name="numero" />
+    </Key>
+    <Property Name="numero" Type="int" Nullable="false" />
+    <Property Name="banco" Type="int" Nullable="false" />
+    <Property Name="descricao" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Banco">
+    <Key>
+      <PropertyRef Name="numero" />
+    </Key>
+    <Property Name="numero" Type="int" Nullable="false" />
+    <Property Name="descricao" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Conta">
+    <Key>
+      <PropertyRef Name="numero" />
+    </Key>
+    <Property Name="numero" Type="int" Nullable="false" />
+    <Property Name="agencia" Type="int" Nullable="false" />
+    <Property Name="descricao" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Movimento">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="data" Type="smalldatetime" Nullable="false" />
+    <Property Name="tipo" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="valor" Type="money" Nullable="false" />
+    <Property Name="numero" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="descricao" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="conta" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Natureza">
+    <Key>
+      <PropertyRef Name="nome" />
+    </Key>
+    <Property Name="nome" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="descricao" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Relacao">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="nchar" Nullable="false" MaxLength="50" />
+    <Property Name="Tipo" Type="char" Nullable="false" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="Titulo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="numero" Type="int" Nullable="false" />
+    <Property Name="relacao" Type="int" Nullable="false" />
+    <Property Name="tipo" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="qtd_parcela" Type="int" Nullable="false" />
+    <Property Name="valor" Type="money" Nullable="false" />
+    <Property Name="vencimento" Type="smalldatetime" Nullable="false" />
+    <Property Name="natureza" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="baixado" Type="char" MaxLength="1" />
+    <Property Name="dta_baixa" Type="smalldatetime" />
+    <Property Name="vlr_pagamento" Type="money" />
+    <Property Name="descricao" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK_Agencia_Banco">
+    <End Role="Banco" Type="GerenciadorModel.Store.Banco" Multiplicity="1" />
+    <End Role="Agencia" Type="GerenciadorModel.Store.Agencia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Banco">
+        <PropertyRef Name="numero" />
+      </Principal>
+      <Dependent Role="Agencia">
+        <PropertyRef Name="banco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Conta_Agencia">
+    <End Role="Agencia" Type="GerenciadorModel.Store.Agencia" Multiplicity="1" />
+    <End Role="Conta" Type="GerenciadorModel.Store.Conta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Agencia">
+        <PropertyRef Name="numero" />
+      </Principal>
+      <Dependent Role="Conta">
+        <PropertyRef Name="agencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Movimento_Conta">
+    <End Role="Conta" Type="GerenciadorModel.Store.Conta" Multiplicity="1" />
+    <End Role="Movimento" Type="GerenciadorModel.Store.Movimento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Conta">
+        <PropertyRef Name="numero" />
+      </Principal>
+      <Dependent Role="Movimento">
+        <PropertyRef Name="conta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Titulo_Natureza">
+    <End Role="Natureza" Type="GerenciadorModel.Store.Natureza" Multiplicity="1" />
+    <End Role="Titulo" Type="GerenciadorModel.Store.Titulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Natureza">
+        <PropertyRef Name="nome" />
+      </Principal>
+      <Dependent Role="Titulo">
+        <PropertyRef Name="natureza" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Titulo_Relacao">
+    <End Role="Relacao" Type="GerenciadorModel.Store.Relacao" Multiplicity="1" />
+    <End Role="Titulo" Type="GerenciadorModel.Store.Titulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Relacao">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Titulo">
+        <PropertyRef Name="relacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

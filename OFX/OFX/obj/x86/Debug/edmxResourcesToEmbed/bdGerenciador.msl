@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GerenciadorModelStoreContainer" CdmEntityContainer="dbGerenciadorEntities">
+    <EntitySetMapping Name="Agencia">
+      <EntityTypeMapping TypeName="GerenciadorModel.Agencia">
+        <MappingFragment StoreEntitySet="Agencia">
+          <ScalarProperty Name="numero" ColumnName="numero" />
+          <ScalarProperty Name="banco" ColumnName="banco" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Banco">
+      <EntityTypeMapping TypeName="GerenciadorModel.Banco">
+        <MappingFragment StoreEntitySet="Banco">
+          <ScalarProperty Name="numero" ColumnName="numero" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Conta">
+      <EntityTypeMapping TypeName="GerenciadorModel.Conta">
+        <MappingFragment StoreEntitySet="Conta">
+          <ScalarProperty Name="numero" ColumnName="numero" />
+          <ScalarProperty Name="agencia" ColumnName="agencia" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Movimento">
+      <EntityTypeMapping TypeName="GerenciadorModel.Movimento">
+        <MappingFragment StoreEntitySet="Movimento">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+          <ScalarProperty Name="numero" ColumnName="numero" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+          <ScalarProperty Name="conta" ColumnName="conta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Natureza">
+      <EntityTypeMapping TypeName="GerenciadorModel.Natureza">
+        <MappingFragment StoreEntitySet="Natureza">
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Relacao">
+      <EntityTypeMapping TypeName="GerenciadorModel.Relacao">
+        <MappingFragment StoreEntitySet="Relacao">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Titulo">
+      <EntityTypeMapping TypeName="GerenciadorModel.Titulo">
+        <MappingFragment StoreEntitySet="Titulo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="numero" ColumnName="numero" />
+          <ScalarProperty Name="relacao" ColumnName="relacao" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="qtd_parcela" ColumnName="qtd_parcela" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+          <ScalarProperty Name="vencimento" ColumnName="vencimento" />
+          <ScalarProperty Name="natureza" ColumnName="natureza" />
+          <ScalarProperty Name="baixado" ColumnName="baixado" />
+          <ScalarProperty Name="dta_baixa" ColumnName="dta_baixa" />
+          <ScalarProperty Name="vlr_pagamento" ColumnName="vlr_pagamento" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

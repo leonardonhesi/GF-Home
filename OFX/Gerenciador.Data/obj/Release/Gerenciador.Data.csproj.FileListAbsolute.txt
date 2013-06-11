@@ -1,0 +1,6 @@
+C:\Documents and Settings\Leonardo\Desktop\OFX\Gerenciador.Data\bin\Release\Gerenciador.Data.dll.config
+C:\Documents and Settings\Leonardo\Desktop\OFX\Gerenciador.Data\bin\Release\Gerenciador.Data.dll
+C:\Documents and Settings\Leonardo\Desktop\OFX\Gerenciador.Data\bin\Release\Gerenciador.Data.pdb
+C:\Documents and Settings\Leonardo\Desktop\OFX\Gerenciador.Data\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Leonardo\Desktop\OFX\Gerenciador.Data\obj\Release\Gerenciador.Data.dll
+C:\Documents and Settings\Leonardo\Desktop\OFX\Gerenciador.Data\obj\Release\Gerenciador.Data.pdb

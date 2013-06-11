@@ -1,0 +1,69 @@
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\bin\Release\OFX.exe.config
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\bin\Release\OFX.exe
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\bin\Release\OFX.pdb
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\bin\Release\Gerenciador.Data.dll
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\bin\Release\Gerenciador.Data.pdb
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Sobre.resources
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.Cadastros.frmCadEmail.resources
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.Cadastros.frmCadUsuario.resources
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.frmEnviaEmail.resources
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.frmExtrato.resources
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.frmFluxoCaixa.resources
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.frmManterContas.resources
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.frmManterEmail.resources
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.frmManterNatureza.resources
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.frmManterTitulo.resources
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.frmManterusuario.resources
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.frmTotalNatureza.resources
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.Login.resources
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Form1.resources
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.Cadastros.frmCadAgencia.resources
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.Cadastros.frmCadBanco.resources
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.Cadastros.frmCadConta.resources
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.Cadastros.frmCadNatureza.resources
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.Cadastros.frmCadRelacao.resources
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.Cadastros.frmCadTitulo.resources
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.frmConcilia.resources
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.frmDashBoard.resources
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.frmPrincipal.resources
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Properties.Resources.resources
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.TelaInicial.resources
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.exe
+C:\Documents and Settings\Leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.pdb
+E:\Users\leonardo\Desktop\OFX\OFX\bin\Release\OFX.exe.config
+E:\Users\leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.exe
+E:\Users\leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.pdb
+E:\Users\leonardo\Desktop\OFX\OFX\bin\Release\OFX.exe
+E:\Users\leonardo\Desktop\OFX\OFX\bin\Release\OFX.pdb
+E:\Users\leonardo\Desktop\OFX\OFX\bin\Release\Gerenciador.Data.dll
+E:\Users\leonardo\Desktop\OFX\OFX\bin\Release\Gerenciador.Data.pdb
+E:\Users\leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.csprojResolveAssemblyReference.cache
+E:\Users\leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Sobre.resources
+E:\Users\leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.Cadastros.frmCadEmail.resources
+E:\Users\leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.Cadastros.frmCadUsuario.resources
+E:\Users\leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.frmEnviaEmail.resources
+E:\Users\leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.frmExtrato.resources
+E:\Users\leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.frmFluxoCaixa.resources
+E:\Users\leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.frmManterContas.resources
+E:\Users\leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.frmManterEmail.resources
+E:\Users\leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.frmManterNatureza.resources
+E:\Users\leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.frmManterTitulo.resources
+E:\Users\leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.frmManterusuario.resources
+E:\Users\leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.frmTotalNatureza.resources
+E:\Users\leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.Login.resources
+E:\Users\leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Form1.resources
+E:\Users\leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.Cadastros.frmCadAgencia.resources
+E:\Users\leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.Cadastros.frmCadBanco.resources
+E:\Users\leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.Cadastros.frmCadConta.resources
+E:\Users\leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.Cadastros.frmCadNatureza.resources
+E:\Users\leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.Cadastros.frmCadRelacao.resources
+E:\Users\leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.Cadastros.frmCadTitulo.resources
+E:\Users\leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.frmConcilia.resources
+E:\Users\leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.frmDashBoard.resources
+E:\Users\leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Formularios.frmPrincipal.resources
+E:\Users\leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.Properties.Resources.resources
+E:\Users\leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.TelaInicial.resources
+E:\Users\leonardo\Desktop\OFX\OFX\obj\x86\Release\OFX.csproj.GenerateResource.Cache

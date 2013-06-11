@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbGerenciadorModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="dbGerenciadorModelStoreContainer">
+    <EntitySet Name="Agencia" EntityType="dbGerenciadorModel.Store.Agencia" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Banco" EntityType="dbGerenciadorModel.Store.Banco" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Conta" EntityType="dbGerenciadorModel.Store.Conta" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="email" EntityType="dbGerenciadorModel.Store.email" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Movimento" EntityType="dbGerenciadorModel.Store.Movimento" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Natureza" EntityType="dbGerenciadorModel.Store.Natureza" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Relacao" EntityType="dbGerenciadorModel.Store.Relacao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Titulo" EntityType="dbGerenciadorModel.Store.Titulo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="usuario" EntityType="dbGerenciadorModel.Store.usuario" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Agencia_Banco" Association="dbGerenciadorModel.Store.FK_Agencia_Banco">
+      <End Role="Banco" EntitySet="Banco" />
+      <End Role="Agencia" EntitySet="Agencia" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Conta_Agencia" Association="dbGerenciadorModel.Store.FK_Conta_Agencia">
+      <End Role="Agencia" EntitySet="Agencia" />
+      <End Role="Conta" EntitySet="Conta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Movimento_Conta" Association="dbGerenciadorModel.Store.FK_Movimento_Conta">
+      <End Role="Conta" EntitySet="Conta" />
+      <End Role="Movimento" EntitySet="Movimento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Movimento_Titulo" Association="dbGerenciadorModel.Store.FK_Movimento_Titulo">
+      <End Role="Titulo" EntitySet="Titulo" />
+      <End Role="Movimento" EntitySet="Movimento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Titulo_Conta" Association="dbGerenciadorModel.Store.FK_Titulo_Conta">
+      <End Role="Conta" EntitySet="Conta" />
+      <End Role="Titulo" EntitySet="Titulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Titulo_Natureza" Association="dbGerenciadorModel.Store.FK_Titulo_Natureza">
+      <End Role="Natureza" EntitySet="Natureza" />
+      <End Role="Titulo" EntitySet="Titulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Titulo_Relacao" Association="dbGerenciadorModel.Store.FK_Titulo_Relacao">
+      <End Role="Relacao" EntitySet="Relacao" />
+      <End Role="Titulo" EntitySet="Titulo" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Agencia">
+    <Key>
+      <PropertyRef Name="numero" />
+    </Key>
+    <Property Name="numero" Type="int" Nullable="false" />
+    <Property Name="banco" Type="int" Nullable="false" />
+    <Property Name="descricao" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Banco">
+    <Key>
+      <PropertyRef Name="numero" />
+    </Key>
+    <Property Name="numero" Type="int" Nullable="false" />
+    <Property Name="descricao" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Conta">
+    <Key>
+      <PropertyRef Name="numero" />
+    </Key>
+    <Property Name="numero" Type="int" Nullable="false" />
+    <Property Name="agencia" Type="int" Nullable="false" />
+    <Property Name="descricao" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="saldo" Type="money" Nullable="false" />
+    <Property Name="saldoInicial" Type="money" />
+    <Property Name="data_criacao" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="email">
+    <Key>
+      <PropertyRef Name="email" />
+    </Key>
+    <Property Name="email" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="smtp" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="porta" Type="int" Nullable="false" />
+    <Property Name="senha" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="observacao" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Movimento">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="data" Type="smalldatetime" Nullable="false" />
+    <Property Name="tipo" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="valor" Type="money" Nullable="false" />
+    <Property Name="numero" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="descricao" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="conta" Type="int" Nullable="false" />
+    <Property Name="saldo" Type="money" />
+    <Property Name="id_titulo" Type="int" />
+  </EntityType>
+  <EntityType Name="Natureza">
+    <Key>
+      <PropertyRef Name="nome" />
+    </Key>
+    <Property Name="nome" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="descricao" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Relacao">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="nchar" Nullable="false" MaxLength="50" />
+    <Property Name="Tipo" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Titulo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="numero" Type="int" Nullable="false" />
+    <Property Name="relacao" Type="int" Nullable="false" />
+    <Property Name="tipo" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="qtd_parcela" Type="int" Nullable="false" />
+    <Property Name="valor" Type="money" Nullable="false" />
+    <Property Name="vencimento" Type="smalldatetime" Nullable="false" />
+    <Property Name="natureza" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="baixado" Type="nvarchar" MaxLength="20" />
+    <Property Name="dta_baixa" Type="smalldatetime" />
+    <Property Name="vlr_pagamento" Type="money" />
+    <Property Name="descricao" Type="nvarchar" MaxLength="100" />
+    <Property Name="conta_baixa" Type="int" />
+    <Property Name="parcela" Type="int" />
+    <Property Name="codigoBarras" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="usuario">
+    <Key>
+      <PropertyRef Name="nome" />
+    </Key>
+    <Property Name="nome" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="senha" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Agencia_Banco">
+    <End Role="Banco" Type="dbGerenciadorModel.Store.Banco" Multiplicity="1" />
+    <End Role="Agencia" Type="dbGerenciadorModel.Store.Agencia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Banco">
+        <PropertyRef Name="numero" />
+      </Principal>
+      <Dependent Role="Agencia">
+        <PropertyRef Name="banco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Conta_Agencia">
+    <End Role="Agencia" Type="dbGerenciadorModel.Store.Agencia" Multiplicity="1" />
+    <End Role="Conta" Type="dbGerenciadorModel.Store.Conta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Agencia">
+        <PropertyRef Name="numero" />
+      </Principal>
+      <Dependent Role="Conta">
+        <PropertyRef Name="agencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Movimento_Conta">
+    <End Role="Conta" Type="dbGerenciadorModel.Store.Conta" Multiplicity="1" />
+    <End Role="Movimento" Type="dbGerenciadorModel.Store.Movimento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Conta">
+        <PropertyRef Name="numero" />
+      </Principal>
+      <Dependent Role="Movimento">
+        <PropertyRef Name="conta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Movimento_Titulo">
+    <End Role="Titulo" Type="dbGerenciadorModel.Store.Titulo" Multiplicity="0..1" />
+    <End Role="Movimento" Type="dbGerenciadorModel.Store.Movimento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Titulo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Movimento">
+        <PropertyRef Name="id_titulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Titulo_Conta">
+    <End Role="Conta" Type="dbGerenciadorModel.Store.Conta" Multiplicity="0..1" />
+    <End Role="Titulo" Type="dbGerenciadorModel.Store.Titulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Conta">
+        <PropertyRef Name="numero" />
+      </Principal>
+      <Dependent Role="Titulo">
+        <PropertyRef Name="conta_baixa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Titulo_Natureza">
+    <End Role="Natureza" Type="dbGerenciadorModel.Store.Natureza" Multiplicity="1" />
+    <End Role="Titulo" Type="dbGerenciadorModel.Store.Titulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Natureza">
+        <PropertyRef Name="nome" />
+      </Principal>
+      <Dependent Role="Titulo">
+        <PropertyRef Name="natureza" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Titulo_Relacao">
+    <End Role="Relacao" Type="dbGerenciadorModel.Store.Relacao" Multiplicity="1" />
+    <End Role="Titulo" Type="dbGerenciadorModel.Store.Titulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Relacao">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Titulo">
+        <PropertyRef Name="relacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
