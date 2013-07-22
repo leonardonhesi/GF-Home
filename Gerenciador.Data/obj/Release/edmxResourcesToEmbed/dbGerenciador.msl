@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbGerenciadorModelStoreContainer" CdmEntityContainer="dbGerenciadorEntities">
+    <EntitySetMapping Name="Agencia">
+      <EntityTypeMapping TypeName="dbGerenciadorModel.Agencia">
+        <MappingFragment StoreEntitySet="Agencia">
+          <ScalarProperty Name="numero" ColumnName="numero" />
+          <ScalarProperty Name="banco" ColumnName="banco" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Banco">
+      <EntityTypeMapping TypeName="dbGerenciadorModel.Banco">
+        <MappingFragment StoreEntitySet="Banco">
+          <ScalarProperty Name="numero" ColumnName="numero" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Conta">
+      <EntityTypeMapping TypeName="dbGerenciadorModel.Conta">
+        <MappingFragment StoreEntitySet="Conta">
+          <ScalarProperty Name="data_criacao" ColumnName="data_criacao" />
+          <ScalarProperty Name="saldoInicial" ColumnName="saldoInicial" />
+          <ScalarProperty Name="saldo" ColumnName="saldo" />
+          <ScalarProperty Name="numero" ColumnName="numero" />
+          <ScalarProperty Name="agencia" ColumnName="agencia" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Movimento">
+      <EntityTypeMapping TypeName="dbGerenciadorModel.Movimento">
+        <MappingFragment StoreEntitySet="Movimento">
+          <ScalarProperty Name="id_titulo" ColumnName="id_titulo" />
+          <ScalarProperty Name="saldo" ColumnName="saldo" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+          <ScalarProperty Name="numero" ColumnName="numero" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+          <ScalarProperty Name="conta" ColumnName="conta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Natureza">
+      <EntityTypeMapping TypeName="dbGerenciadorModel.Natureza">
+        <MappingFragment StoreEntitySet="Natureza">
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Relacao">
+      <EntityTypeMapping TypeName="dbGerenciadorModel.Relacao">
+        <MappingFragment StoreEntitySet="Relacao">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="email">
+      <EntityTypeMapping TypeName="dbGerenciadorModel.email">
+        <MappingFragment StoreEntitySet="email">
+          <ScalarProperty Name="observacao" ColumnName="observacao" />
+          <ScalarProperty Name="senha" ColumnName="senha" />
+          <ScalarProperty Name="porta" ColumnName="porta" />
+          <ScalarProperty Name="smtp" ColumnName="smtp" />
+          <ScalarProperty Name="email1" ColumnName="email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Titulo">
+      <EntityTypeMapping TypeName="dbGerenciadorModel.Titulo">
+        <MappingFragment StoreEntitySet="Titulo">
+          <ScalarProperty Name="codigoBarras" ColumnName="codigoBarras" />
+          <ScalarProperty Name="parcela" ColumnName="parcela" />
+          <ScalarProperty Name="conta_baixa" ColumnName="conta_baixa" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+          <ScalarProperty Name="vlr_pagamento" ColumnName="vlr_pagamento" />
+          <ScalarProperty Name="dta_baixa" ColumnName="dta_baixa" />
+          <ScalarProperty Name="baixado" ColumnName="baixado" />
+          <ScalarProperty Name="natureza" ColumnName="natureza" />
+          <ScalarProperty Name="vencimento" ColumnName="vencimento" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+          <ScalarProperty Name="qtd_parcela" ColumnName="qtd_parcela" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="relacao" ColumnName="relacao" />
+          <ScalarProperty Name="numero" ColumnName="numero" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuario">
+      <EntityTypeMapping TypeName="dbGerenciadorModel.usuario">
+        <MappingFragment StoreEntitySet="usuario">
+          <ScalarProperty Name="senha" ColumnName="senha" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
